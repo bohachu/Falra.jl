@@ -103,24 +103,30 @@ Due to an issue caused by the removal of some APIs in Julia 1.8, **Genie v4 apps
 - and more ...
 
 ```julia
-# Genie Hello World!
-# As simple as Hello
-using Genie
-route("/hello") do
-    "Welcome to Genie!"
-end
-# Powerful high-performance HTML view templates
-using Genie.Renderer.Html
-route("/html") do
-    h1("Welcome to Genie!") |> html
-end
-# JSON rendering built in
-using Genie.Renderer.Json
-route("/json") do
-    (:greeting => "Welcome to Genie!") |> json
-end
-# Start the app!
-up(8888)
+using Pkg
+Pkg.add("HTTP")
+Pkg.add("JSON")
+using HTTP
+using JSON
+
+url = "https://falradist.bowenchiu.repl.co/falra/dist/"
+
+params = Dict(
+  "token"=>"token123",
+  "user_name"=>"bohachu",
+  "project_name"=>"add",
+  "lst_command"=> ["julia"],
+  "script_filename"=>"main.jl",
+  "lst_parameters"=>["3","4.2"]
+)
+
+response = HTTP.request("POST", url,
+                    ["Content-Type" => "application/json"],
+                    JSON.json(params))
+
+println(response.status)
+println(response.body)
+println(JSON.parse(String(response.body)))
 ```
 
 🔌 **WebSocket:** Genie provides a powerful workflow for client-server communication over websockets
