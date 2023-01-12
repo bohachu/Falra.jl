@@ -9,7 +9,7 @@ end
 original_folder = pwd()
 route("/falra/dist/", method = POST) do
   dic = jsonpayload()
-  cd("github/$(dic["user_name"])/$(dic["project_name"])")
+  cd("$(dic["path"])")
   output=readchomp(`$(dic["lst_command"]) $(dic["script_filename"]) $(dic["lst_parameters"])`)
   cd(original_folder)
   output
