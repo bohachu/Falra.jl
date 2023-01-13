@@ -10,7 +10,7 @@
   <p>
     <h3>
       <b>
-        Falra.jl
+        Falra Distributed Framework
       </b>
     </h3>
   </p>
@@ -93,15 +93,13 @@ Due to an issue caused by the removal of some APIs in Julia 1.8, **Genie v4 apps
 - Falra framework transfer through https without setting any firewall settings.
 
 
-🔌 **WebSocket:** Genie provides a powerful workflow for client-server communication over websockets
+🔌 **Install:** Genie provides a powerful workflow for client-server communication over websockets
 
-```julia-repl
-julia> using Genie, Genie.Router
-julia> channel("/foo/bar") do
-         # process request
-       end
-[WS] /foo/bar => #1 | :foo_bar
-```
+to install julia: https://julialang.org/downloads/
+
+git clone https://github.com/bohachu/Falra.jl
+
+julia src/server.jl
 
 📃 **Provide examples of use:** Support for `Julia`, `Python`, `JavaScript`.
 
@@ -111,11 +109,18 @@ We use the CURL command to call Falra Framework distributed computing, the follo
 
 Example:
 
-```julia-repl
-julia> using Pkg
-julia> Pkg.add("GenieAuthentication") # adding authentication plugin
-julia> using GenieAuthentication
-julia> GenieAuthentication.install(@__DIR__)
+```curl
+== julia ==
+
+time curl -d '
+{
+  "token":"token123",
+  "path":"github/bohachu/add",
+  "lst_command": ["julia"],
+  "script_filename":"main.jl",
+  "lst_parameters":["3","4.2"]
+}
+' -H "Content-Type: application/json" -X POST https://juliaserver.bowenchiu.repl.co/falra/dist/ 
 ```
 
 <!-- ⏰ **Tasks:** Tasks allow you to perform various operations and hook them with crons jobs for automation
