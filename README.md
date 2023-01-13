@@ -123,6 +123,34 @@ time curl -d '
 ' -H "Content-Type: application/json" -X POST https://juliaserver.bowenchiu.repl.co/falra/dist/ 
 ```
 
+```curl
+== python ==
+
+time curl -d '
+{
+  "token":"token123",
+  "path":"github/bohachu/add",
+  "lst_command": ["python3"],
+  "script_filename":"main.py",
+  "lst_parameters":["1.2","3.4"]
+}
+' -H "Content-Type: application/json" -X POST https://juliaserver.bowenchiu.repl.co/falra/dist/ 
+```
+
+```curl
+== deno ==
+
+time curl -d '
+{
+  "token":"token123",
+  "path":"github/bohachu/add",
+  "lst_command": ["deno","run"],
+  "script_filename":"main.js",
+  "lst_parameters":["3.1","4.2"]
+}
+' -H "Content-Type: application/json" -X POST https://juliaserver.bowenchiu.repl.co/falra/dist/
+```
+
 <!-- ⏰ **Tasks:** Tasks allow you to perform various operations and hook them with crons jobs for automation
 
 ```julia
