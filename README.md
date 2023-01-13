@@ -109,7 +109,7 @@ We use the CURL command to call Falra Framework distributed computing, the follo
 
 Example:
 ***
-=== julia ===
+`Julia`
 ```curl
 time curl -d '
 {
@@ -122,7 +122,7 @@ time curl -d '
 ' -H "Content-Type: application/json" -X POST https://juliaserver.bowenchiu.repl.co/falra/dist/ 
 ```
 
-=== python ===
+`Python`
 ```curl
 time curl -d '
 {
@@ -135,7 +135,7 @@ time curl -d '
 ' -H "Content-Type: application/json" -X POST https://juliaserver.bowenchiu.repl.co/falra/dist/ 
 ```
 
-=== deno ===
+`JavaScript`
 ```curl
 time curl -d '
 {
