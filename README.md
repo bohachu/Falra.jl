@@ -287,6 +287,4 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 ***
 e-mail: service@cameo.tw
 
-### **A link to your live site**
-***
 see the [`Falra Distributed Framework`](https://falra-web.vercel.app/)
