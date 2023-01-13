@@ -1,7 +1,7 @@
 <div align="center">
   <a href="https://falra-web.vercel.app/">
     <img
-      src="https://imgur.com/a/WhxpSuA"
+      src="https://falra-web.vercel.app/img/merge/hero.jpg"
       alt="FDF Logo"
       height="64"
     />
