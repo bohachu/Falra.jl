@@ -85,16 +85,16 @@ Due to an issue caused by the removal of some APIs in Julia 1.8, **Genie v4 apps
 </details> -->
 
 ### **Features**
-
+***
 💪 **Just like on your console, but 100 times faster!**
 - Falra framework helps you execute your programs on our distributed computing platform easily.
 
 💪 **No extra settings!**
 - Falra framework transfer through https without setting any firewall settings.
 
-***
-### **Install**
 
+### **Install**
+***
 to install julia: https://julialang.org/downloads/
 
 to install Falra Distributed Framework
@@ -103,6 +103,7 @@ to install Falra Distributed Framework
 git clone https://github.com/bohachu/Falra.jl
 julia src/server.jl
 ```
+### **Example**
 ***
 ### **Provide examples of use:** Support for `Julia`, `Python`, `JavaScript`.
 
@@ -110,8 +111,7 @@ We can support three different programming languages, including Julia 1.7.2, Pyt
 
 We use the CURL command to call Falra Framework distributed computing, the following are the examples in three different languages. 
 
-Example:
-***
+
 `Julia`
 ```curl
 time curl -d '
@@ -284,7 +284,9 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 * Genie uses a multitude of packages that have been kindly contributed by the Julia community -->
 
 ### **Contact information**
+***
 e-mail: service@cameo.tw
 
 ### **A link to your live site**
+***
 see the [`Falra Distributed Framework`](https://falra-web.vercel.app/)
