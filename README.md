@@ -283,8 +283,8 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 
 * Genie uses a multitude of packages that have been kindly contributed by the Julia community -->
 
-## **License**
+## **Contact information**
+mailto:service@cameo.tw
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [`LICENSE`](https://github.com/GenieFramework/Genie.jl/blob/master/LICENSE.md) file for details.
-
-<p>⭐ If you enjoy this project please consider starring the 🧞 <b>Genie.jl</b> GitHub repo. It will help us fund our open source projects.</p>
+## **A link to your live site**
+see the [`Falra Distributed Framework`](https://falra-web.vercel.app/)
