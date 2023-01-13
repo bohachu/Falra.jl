@@ -284,7 +284,7 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 * Genie uses a multitude of packages that have been kindly contributed by the Julia community -->
 
 ## **Contact information**
-mailto:service@cameo.tw
+mail: service@cameo.tw
 
 ## **A link to your live site**
 see the [`Falra Distributed Framework`](https://falra-web.vercel.app/)
