@@ -1,8 +1,8 @@
 <div align="center">
-  <a href="https://genieframework.com/">
+  <a href="https://falra-web.vercel.app/">
     <img
-      src="docs/content/img/genie-lightblue.svg"
-      alt="Genie Logo"
+      src="https://imgur.com/a/WhxpSuA"
+      alt="FDF Logo"
       height="64"
     />
   </a>
