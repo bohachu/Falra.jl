@@ -86,10 +86,10 @@ Due to an issue caused by the removal of some APIs in Julia 1.8, **Genie v4 apps
 
 ### **Features**
 
-💪**Just like on your console, but 100 times faster!**
+💪 **Just like on your console, but 100 times faster!**
 - Falra framework helps you execute your programs on our distributed computing platform easily.
 
-💪**No extra settings!**
+💪 **No extra settings!**
 - Falra framework transfer through https without setting any firewall settings.
 
 
