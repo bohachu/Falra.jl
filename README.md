@@ -96,6 +96,7 @@ Due to an issue caused by the removal of some APIs in Julia 1.8, **Genie v4 apps
 ### **Install**
 
 to install julia: https://julialang.org/downloads/
+to install Falra Distributed Framework
 
 ```
 git clone https://github.com/bohachu/Falra.jl
