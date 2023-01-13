@@ -93,7 +93,7 @@ Due to an issue caused by the removal of some APIs in Julia 1.8, **Genie v4 apps
 - Falra framework transfer through https without setting any firewall settings.
 
 ***
-🔌 **Install:** Genie provides a powerful workflow for client-server communication over websockets
+### **Install**
 
 to install julia: https://julialang.org/downloads/
 
@@ -101,7 +101,7 @@ git clone https://github.com/bohachu/Falra.jl
 
 julia src/server.jl
 ***
-📃 **Provide examples of use:** Support for `Julia`, `Python`, `JavaScript`.
+### **Provide examples of use:** Support for `Julia`, `Python`, `JavaScript`.
 
 We can support three different programming languages, including Julia 1.7.2, Python 3.10.4, and Javascript (Deno 1.22.0).
 
@@ -280,8 +280,8 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 
 * Genie uses a multitude of packages that have been kindly contributed by the Julia community -->
 
-## **Contact information**
+### **Contact information**
 e-mail: service@cameo.tw
 
-## **A link to your live site**
+### **A link to your live site**
 see the [`Falra Distributed Framework`](https://falra-web.vercel.app/)
