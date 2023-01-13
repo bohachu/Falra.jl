@@ -109,9 +109,8 @@ We use the CURL command to call Falra Framework distributed computing, the follo
 
 Example:
 
-```curl
 == julia ==
-
+```curl
 time curl -d '
 {
   "token":"token123",
@@ -123,9 +122,8 @@ time curl -d '
 ' -H "Content-Type: application/json" -X POST https://juliaserver.bowenchiu.repl.co/falra/dist/ 
 ```
 
-```curl
 == python ==
-
+```curl
 time curl -d '
 {
   "token":"token123",
@@ -137,9 +135,8 @@ time curl -d '
 ' -H "Content-Type: application/json" -X POST https://juliaserver.bowenchiu.repl.co/falra/dist/ 
 ```
 
-```curl
 == deno ==
-
+```curl
 time curl -d '
 {
   "token":"token123",
@@ -284,7 +281,7 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 * Genie uses a multitude of packages that have been kindly contributed by the Julia community -->
 
 ## **Contact information**
-mail: service@cameo.tw
+e-mail: service@cameo.tw
 
 ## **A link to your live site**
 see the [`Falra Distributed Framework`](https://falra-web.vercel.app/)
