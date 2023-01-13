@@ -97,9 +97,10 @@ Due to an issue caused by the removal of some APIs in Julia 1.8, **Genie v4 apps
 
 to install julia: https://julialang.org/downloads/
 
+```
 git clone https://github.com/bohachu/Falra.jl
-
 julia src/server.jl
+```
 ***
 ### **Provide examples of use:** Support for `Julia`, `Python`, `JavaScript`.
 
