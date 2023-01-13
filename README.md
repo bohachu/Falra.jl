@@ -87,9 +87,10 @@ Due to an issue caused by the removal of some APIs in Julia 1.8, **Genie v4 apps
 ### **Features**
 
 💪**Just like on your console, but 100 times faster!**
--Falra framework helps you execute your programs on our distributed computing platform easily.
+- Falra framework helps you execute your programs on our distributed computing platform easily.
+
 💪**No extra settings!**
--Falra framework transfer through https without setting any firewall settings.
+- Falra framework transfer through https without setting any firewall settings.
 
 
 🔌 **WebSocket:** Genie provides a powerful workflow for client-server communication over websockets
@@ -105,6 +106,7 @@ julia> channel("/foo/bar") do
 📃 **Provide examples of use:** Support for `Julia`, `Python`, `JavaScript`.
 
 We can support three different programming languages, including Julia 1.7.2, Python 3.10.4, and Javascript (Deno 1.22.0).
+
 We use the CURL command to call Falra Framework distributed computing, the following are the examples in three different languages. 
 
 Example:
