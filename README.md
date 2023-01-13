@@ -92,7 +92,7 @@ Due to an issue caused by the removal of some APIs in Julia 1.8, **Genie v4 apps
 💪 **No extra settings!**
 - Falra framework transfer through https without setting any firewall settings.
 
-
+***
 🔌 **Install:** Genie provides a powerful workflow for client-server communication over websockets
 
 to install julia: https://julialang.org/downloads/
@@ -100,7 +100,7 @@ to install julia: https://julialang.org/downloads/
 git clone https://github.com/bohachu/Falra.jl
 
 julia src/server.jl
-
+***
 📃 **Provide examples of use:** Support for `Julia`, `Python`, `JavaScript`.
 
 We can support three different programming languages, including Julia 1.7.2, Python 3.10.4, and Javascript (Deno 1.22.0).
@@ -108,7 +108,7 @@ We can support three different programming languages, including Julia 1.7.2, Pyt
 We use the CURL command to call Falra Framework distributed computing, the following are the examples in three different languages. 
 
 Example:
-
+***
 === julia ===
 ```curl
 time curl -d '
@@ -135,8 +135,7 @@ time curl -d '
 ' -H "Content-Type: application/json" -X POST https://juliaserver.bowenchiu.repl.co/falra/dist/ 
 ```
 
-***
-deno
+=== deno ===
 ```curl
 time curl -d '
 {
