@@ -44,15 +44,15 @@
   </p> -->
 </div>
 
-<p style="font-family:verdana;font-size:80%;margin-bottom:4%" align="center">
+<!-- <p style="font-family:verdana;font-size:80%;margin-bottom:4%" align="center">
 <u>Julia data dashboards powered by Genie</u>
-</p>
+</p> -->
 
 <p align="center">
-  Genie is a full-stack web framework that provides a streamlined and efficient workflow for developing modern web applications. It builds on Julia's strengths (high-level, high-performance, dynamic, JIT compiled), exposing a rich API and a powerful toolset for productive web development.
+  By using curl command, you can easily deploy your code to Falra.jl and start to compute with multiple instances. Falra.jl can be called anywhere from edge devices to the internal computing center via HTTPS, which adopts firewall policy easily. Moreover, the code could be similar either stand-alone or remote call for distributed computation, it means you can save lots of time on maintaining different versions.
 </p>
 
-#### **Need Help?** Reach out on our social media channels.
+<!-- #### **Need Help?** Reach out on our social media channels.
 
 [![Chat on Discord](https://img.shields.io/badge/chat-Discord-7289DA?logo=discord)](https://discord.com/invite/9zyZbD6J7H) [![Chat on Gitter](https://img.shields.io/badge/gitter-chat-red)](https://gitter.im/essenciary/Genie.jl) [![Discuss on GitHub](https://img.shields.io/badge/discussions-GitHub-333333?logo=github)](https://github.com/GenieFramework/Genie.jl/discussions)
 
@@ -82,39 +82,15 @@ Due to an issue caused by the removal of some APIs in Julia 1.8, **Genie v4 apps
 
 ---
 
-</details>
+</details> -->
 
 ### **Features**
 
-🛠**Genie Router:** Genie has a really powerful
-💪 `Router`. Matching web requests to functions, extracting and setting up the request's variables and the execution environment, and invoking the response methods. Features include:
+💪**Just like on your console, but 100 times faster!**
+-Falra framework helps you execute your programs on our distributed computing platform easily.
+💪**No extra settings!**
+-Falra framework transfer through https without setting any firewall settings.
 
-- Static, Dynamic, Named routing
-- Routing parameters
-- Linking routes
-- Route management (Listing, Deleting, Modifying) support
-- Routing methods (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`, `OPTIONS`)
-- and more ...
-
-```julia
-using Pkg
-Pkg.add.(["HTTP","JSON"])
-using HTTP, JSON
-
-response = HTTP.request(
-  "POST", 
-  "https://falradist.bowenchiu.repl.co/falra/dist/",
-  ["Content-Type" => "application/json"],
-  JSON.json(Dict(
-    "token"=>"token123",
-    "user_name"=>"bohachu",
-    "project_name"=>"add",
-    "lst_command"=> ["julia"],
-    "script_filename"=>"main.jl",
-    "lst_parameters"=>["3","4.2"])))
-
-println(JSON.parse(String(response.body)))
-```
 
 🔌 **WebSocket:** Genie provides a powerful workflow for client-server communication over websockets
 
@@ -126,9 +102,12 @@ julia> channel("/foo/bar") do
 [WS] /foo/bar => #1 | :foo_bar
 ```
 
-📃 **Templating:** Built-in templates support for `HTML`, `JSON`, `Markdown`, `JavaScript` views.
+📃 **Provide examples of use:** Support for `Julia`, `Python`, `JavaScript`.
 
-🔐 **Authentication:** Easy to add database backed authentication for restricted area of a website.
+We can support three different programming languages, including Julia 1.7.2, Python 3.10.4, and Javascript (Deno 1.22.0).
+We use the CURL command to call Falra Framework distributed computing, the following are the examples in three different languages. 
+
+Example:
 
 ```julia-repl
 julia> using Pkg
@@ -137,7 +116,7 @@ julia> using GenieAuthentication
 julia> GenieAuthentication.install(@__DIR__)
 ```
 
-⏰ **Tasks:** Tasks allow you to perform various operations and hook them with crons jobs for automation
+<!-- ⏰ **Tasks:** Tasks allow you to perform various operations and hook them with crons jobs for automation
 
 ```julia
 module S3DBTask
@@ -267,7 +246,7 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 
 * Hoppscoth for readme structure template
 
-* Genie uses a multitude of packages that have been kindly contributed by the Julia community
+* Genie uses a multitude of packages that have been kindly contributed by the Julia community -->
 
 ## **License**
 
