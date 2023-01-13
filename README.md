@@ -10,21 +10,21 @@
   <p>
     <h3>
       <b>
-        Genie.jl
+        Falra.jl
       </b>
     </h3>
   </p>
   <p>
-    <b> 🧞 The highly productive Julia web framework
+    <b> 🧞 Apply distributed computation rapidly without hosting any instances.
     </b>
   </p>
 
-  <p>
+<!--   <p>
 
 [![Docs](https://img.shields.io/badge/genie-docs-greenyellow)](https://www.genieframework.com/docs/) [![current status](https://img.shields.io/badge/julia%20support-v1.6%20and%20up-dark%20green)](https://github.com/GenieFramework/Genie.jl/blob/173d8e3deb47f20b3f8b4e5b12da6bf4c59f3370/Project.toml#L53) [![Website](https://img.shields.io/website?url=https%3A%2F%2Fgenieframework.com&logo=genie)](https://www.genieframework.com/) [![Tests](https://img.shields.io/badge/build-passing-green)](https://github.com/GenieFramework/Genie.jl/actions) [![Genie Downloads](https://shields.io/endpoint?url=https://pkgs.genieframework.com/api/v1/badge/Genie)](https://pkgs.genieframework.com?packages=Genie) [![Tweet](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FGenieFramework%2FGenie.jl)](https://twitter.com/GenieMVC)
 
-  </p>
-  <p>
+  </p> -->
+<!--   <p>
     <sub>
       Built with ❤︎ by
       <a href="https://github.com/GenieFramework/Genie.jl/graphs/contributors">
@@ -32,8 +32,8 @@
       </a>
     </sub>
   </p>
-  <br />
-  <p>
+  <br /> -->
+<!--   <p>
     <a href="https://www.genieframework.com/">
       <img
         src="docs/content/img/genie.gif"
@@ -41,14 +41,8 @@
         width="100%"
       />
     </a>
-  </p>
+  </p> -->
 </div>
-
-<h2>
-  Important: Genie v4 is not compatible with Julia version 1.8 and up. For Julia 1.8 and up support, please use Genie 5.
-  If you have applications developed with Genie v4, please upgrade them to Genie 5, by following the migration guide
-  provided in the Genie docs.
-</h2>
 
 <p style="font-family:verdana;font-size:80%;margin-bottom:4%" align="center">
 <u>Julia data dashboards powered by Genie</u>
