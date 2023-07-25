@@ -1,0 +1,11 @@
+using Test
+include("DownloadGoogleDriveFile_tests.jl")
+include("DecompressZipFile_tests.jl")
+include("PreviewCSVFirstNLines_test.jl")
+include("CountCSVDataRow_tests.jl")
+include("CreateGithubRepository_tests.jl")
+include("UploadGithub_tests.jl")
+include("OpenaiChat_tests.jl")
+include("GenerateGithubActionYML_tests.jl")
+include("DispatchGithubAction_tests.jl")
+include("DownloadLatestArtifacts_tests.jl")
