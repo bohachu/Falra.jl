@@ -11,6 +11,7 @@ function upload_github(token::String, repo::String, files::Dict{String, String},
         if !isdir(target_dir)
             mkpath(target_dir)
         end
+        println("UploadGithub.jl, source_path, tartget_path:",source_path, target_path)
         cp(source_path, target_path, force=true)
     end
     run(`git add .`)
