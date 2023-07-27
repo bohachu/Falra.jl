@@ -55,4 +55,5 @@ jobs:
     open("./data/main.yml", "w") do f
       write(f, yml)
     end
+    println(yml)
   end
