@@ -1,6 +1,7 @@
 # ./src/UploadGithub.jl
 function upload_github(token::String, repo::String, files::Dict{String, String}, commit_message::String="ok", branch::String="main")
     username, repo_name = split(repo, '/')
+    run(`rm -fr $(repo_name)`)
     if !isdir(repo_name)
         run(`git clone https://$(token)@github.com/$(repo)`)
     end
@@ -14,6 +15,7 @@ function upload_github(token::String, repo::String, files::Dict{String, String},
         println("UploadGithub.jl, source_path, tartget_path:",source_path, target_path)
         cp(source_path, target_path, force=true)
     end
+    run(`git pull`)
     run(`git add .`)
     if !isempty(read(`git status --porcelain`, String))
         run(`git config --global user.email "cbh@cameo.tw"`)
