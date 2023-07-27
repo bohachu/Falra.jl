@@ -1,6 +1,7 @@
 # ./src/UploadGithub.jl
-function upload_github(token::String, repo::String, files::Dict{String, String}, commit_message::String="ok", branch::String="main")
+function upload_github(token::String, repo::String, files::Dict{String, String}, commit_message::String="ok", branch::String="main", user_directory)
     username, repo_name = split(repo, '/')
+    run(`cd $(user_directory)`)
     run(`rm -fr $(repo_name)`)
     if !isdir(repo_name)
         run(`git clone https://$(token)@github.com/$(repo)`)

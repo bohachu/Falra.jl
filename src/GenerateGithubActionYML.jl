@@ -1,6 +1,6 @@
 using Printf
 
-function generate_github_action_yml(args::Vector{String}, repository::String, version::String, packages::Vector{String}, path::String, script::String, arg_name::String, max_parallel::Int)
+function generate_github_action_yml(args::Vector{String}, repository::String, version::String, packages::Vector{String}, path::String, script::String, arg_name::String, max_parallel::Int, user_directory)
     args_str = join(["\"$arg\"" for arg in args], "\n          - ")
     packages_str = join(packages, "\", \"")
 
@@ -51,6 +51,7 @@ jobs:
           path: ./all_result.csv
           retention-days: 7
     """ max_parallel arg_name args_str repository version packages_str path script arg_name arg_name path arg_name
+    cd(user_directory)
     mkpath("./data")
     open("./data/main.yml", "w") do f
       write(f, yml)

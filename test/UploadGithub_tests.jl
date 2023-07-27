@@ -8,5 +8,6 @@ files = Dict(
     "/Users/chialolee/Vscode/Falra.jl/src/main.jl" => "src/main.jl"
 )
 commit_message = "ok"
-upload_github(ENV["GITHUB_ACCESS_TOKEN"], repo, files, commit_message)
+user_directory = "./users/falra_botrun_ai"
+upload_github(ENV["GITHUB_ACCESS_TOKEN"], repo, files, commit_message, user_directory)
 
