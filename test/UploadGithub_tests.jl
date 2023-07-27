@@ -9,5 +9,5 @@ files = Dict(
 )
 commit_message = "ok"
 user_directory = "./users/falra_botrun_ai"
-upload_github(ENV["GITHUB_ACCESS_TOKEN"], repo, files, commit_message, user_directory)
+upload_github(user_directory, ENV["GITHUB_ACCESS_TOKEN"], repo, files, commit_message)
 
