@@ -2,7 +2,7 @@
 function upload_github(user_directory, token::String, repo::String, files::Dict{String, String}, commit_message::String="ok", branch::String="main")
     username, repo_name = split(repo, '/')
     println("upload_github, pwd:",pwd())
-    run(`cd $(user_directory)`)
+    cd(user_directory)
     run(`rm -fr $(repo_name)`)
     if !isdir(repo_name)
         run(`git clone https://$(token)@github.com/$(repo)`)
