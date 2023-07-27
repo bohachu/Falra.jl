@@ -1,6 +1,6 @@
 using HTTP
 using JSON
-function create_github_repository(token::String, user_name, repo_name::String, private::Bool=false)
+function create_github_repository(token::String, repo_name::String, private::Bool=false)
     try
         url = "https://api.github.com/user/repos"
         headers = Dict(
