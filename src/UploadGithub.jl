@@ -16,6 +16,9 @@ function upload_github(token::String, repo::String, files::Dict{String, String},
     end
     run(`git add .`)
     if !isempty(read(`git status --porcelain`, String))
+        run(`git config --global user.email "cbh@cameo.tw"`)
+        run(`git config --global user.name "bohachu"`)    
+    
         run(`git commit -m $(commit_message)`)
     end
     run(`git push`)
