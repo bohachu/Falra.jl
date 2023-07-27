@@ -55,5 +55,6 @@ jobs:
     open("./data/main.yml", "w") do f
       write(f, yml)
     end
-    println(yml)
+    println(".yml file path: "*"./data/main.yml")
+    println(".yml content:\n"*yml)
   end
