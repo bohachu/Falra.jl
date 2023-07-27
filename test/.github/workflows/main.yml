@@ -1,0 +1,47 @@
+name: main.yml
+on: workflow_dispatch
+jobs:
+  setup_environment_1:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 20
+      matrix:
+        doc_id:
+          - "1S61RyYRl1MgWZ1dUfh61czjgvnwsaKKh"
+          - "1vUWRBp5sTao3b0iUXfSPT9M0W1rA7EoX"
+          - "1TQUn2rkUQsVgABxVWCTdaT57UJJMIDUI"
+    steps:
+      - name: Checkout repository and setup julia environment
+        uses: actions/checkout@v2
+        with:
+          repository: bohachu/Falra.jl
+          ref: main
+      - name: Set up Julia
+        uses: julia-actions/setup-julia@v1
+        with:
+          version: '1.9.0'
+      - name: Run script
+        run: 'julia -e ''using Pkg; Pkg.add(["CSV", "DataFrames", "ZipFile", "CodecZlib", "Dates", "GZip", "HTTP", "JSON", "ArgParse"])'' && cd ai_gen && julia main.jl --doc_id "${{ matrix.doc_id }}"'
+      - name: Upload individual result files as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: id_${{github.run_id}}
+          path: ./ai_gen/data/${{ matrix.doc_id }}_result.csv
+          retention-days: 7
+
+  merge_and_upload:
+    needs: setup_environment_1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Download all artifacts
+        uses: actions/download-artifact@v3
+      - name: Merge CSV files
+        run: 'for file in $(ls -1 ./id_${{github.run_id}}/*result.csv); do if [ "$file" = "$(ls -1 ./id_${{github.run_id}}/*result.csv | head -n1)" ]; then cat $file; else tail -n+2 $file; fi; done > ./all_result.csv'
+      - name: Upload merged file as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: all_result
+          path: ./all_result.csv
+          retention-days: 7

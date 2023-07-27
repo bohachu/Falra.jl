@@ -2,7 +2,7 @@ include("../src/UploadGithub.jl")
 using DotEnv
 
 DotEnv.config()
-repo = "ChialoLee/test_repo"
+repo = "bohachu/"*"test"
 files = Dict(
     "/Users/chialolee/main.yml" => ".github/workflows/main.yml",
     "/Users/chialolee/Vscode/Falra.jl/src/main.jl" => "src/main.jl"
