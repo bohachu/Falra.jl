@@ -8,7 +8,8 @@ function upload_github(user_directory, token::String, repo::String, files::Dict{
     end
     cd(repo_name)
     run(`git checkout $(branch)`)
-    run(`cp -r ../Falra.jl .`)
+    mkpath("Falra.jl/src")
+    run(`cp ../code/Falra.jl/src/*.jl ./Falra.jl/src`)
     for (source_path, target_path) in files
         target_dir = dirname(target_path)
         if !isdir(target_dir)
