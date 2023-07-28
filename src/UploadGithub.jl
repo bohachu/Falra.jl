@@ -1,5 +1,11 @@
 # ./src/UploadGithub.jl
 function upload_github(user_directory, token::String, repo::String, files::Dict{String, String}, commit_message::String="ok", branch::String="main")
+    println("user_directory:",user_directory)
+    println("token:",token)
+    println("repo:",repo)
+    println("files:",files)
+    println("commit_message:",commit_message)
+    println("branch:",branch)
     username, repo_name = split(repo, '/')
     println("upload_github, pwd:",pwd())
     cd(user_directory)
