@@ -1,13 +1,6 @@
 # ./src/UploadGithub.jl
 function upload_github(user_directory, token::String, repo::String, files::Dict{String, String}, commit_message::String="ok", branch::String="main")
-    println("user_directory:",user_directory)
-    println("token:",token)
-    println("repo:",repo)
-    println("files:",files)
-    println("commit_message:",commit_message)
-    println("branch:",branch)
     username, repo_name = split(repo, '/')
-    println("upload_github, pwd:",pwd())
     cd(user_directory)
     run(`rm -fr $(repo_name)`)
     if !isdir(repo_name)
@@ -20,7 +13,6 @@ function upload_github(user_directory, token::String, repo::String, files::Dict{
         if !isdir(target_dir)
             mkpath(target_dir)
         end
-        println("UploadGithub.jl, source_path, tartget_path:",source_path, target_path)
         cp(source_path, target_path, force=true)
     end
     run(`git pull`)
